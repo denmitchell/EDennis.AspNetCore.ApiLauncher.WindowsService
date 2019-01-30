@@ -35,7 +35,7 @@ if($service -ne $null){
 $Credential = $host.ui.PromptForCredential("Need credentials", "Please enter your user name and password.", "", "NetBiosUserName")
 
 #create the service
-New-Service -Name "ApiLauncherService" -BinaryPathName "$apiExePath" -Credential $Credential -DisplayName "ApiLauncher Service" -StartupType Automatic -Description "Launches Apis via MQTT messages."
+New-Service -Name "ApiLauncherService" -BinaryPathName "$apiExePath" -Credential $Credential -DisplayName "ApiLauncher Service" -StartupType Automatic -Description "Launches Apis via MQTT messages." -DependsOn NetLogon
 
 #start the service
 Start-Service -Name "ApiLauncherService"
