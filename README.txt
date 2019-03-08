@@ -1,4 +1,4 @@
-*Note: this project provides a windows service implementation of ApiLauncher.  For an implementation that does not require a windows service, see EDennis.AspNetCore.Base.*
+_Note: this project provides a windows service implementation of ApiLauncher.  For an implementation that does not require a windows service, see EDennis.AspNetCore.Base._
 
 ApiLauncher is an application that runs one or more .NET Core MVC Web API projects upon which another project depends.  This can be useful for integration testing scenarios where, for instance, one project depends upon an Identity Server project and possibly other projects exposing REST endpoints.  For integration testing scenarios, it is easier to simply specify what API projects must run during the integration tests, and let the ApiLauncher handle running and stopping the requisite APIs.
 
